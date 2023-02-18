@@ -28,7 +28,6 @@ def planet(update, context):
     print("/planet")
     update.message.reply_text("Введите название планеты на английском")
     planet = update.message.text.split()
-    if planet 
 
 def talk_to_me(update, context):
     text = update.message.text

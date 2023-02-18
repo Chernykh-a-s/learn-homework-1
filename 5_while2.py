@@ -40,6 +40,3 @@ def ask_user(answers_dict):
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)
-    
-if __name__ == "__main__":
-    ask_user(questions_and_answers)
