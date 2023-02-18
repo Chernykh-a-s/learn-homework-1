@@ -22,25 +22,32 @@ stock = [
 ]
 
 def sales(stock_sales):
-  store_sales = 0
-  for key in stock:
+  sum_sales = 0
+  for sale in stock_sales:
+    sum_sales += sale
+  return sum_sales
+
+
+def avg_sales(stock_sales):
+  s_sales = 0
+  for sale in stock_sales:
+    s_sales += sale
+  return s_sales / len(stock_sales)
+
+
+for one_product in stock:
+  product_avg = sales(one_product['items_sold'])
+  print(f'Количество продаж {one_product["product"]}: {round(product_avg,1)}')
+
+for one_product in stock:
+  product_avg = avg_sales(one_product['items_sold'])
+  print(f'Среднее количество продаж {one_product["product"]}: {round(product_avg,1)}')
+
+store_sales = 0
+for key in stock:
     for i in key['items_sold']:
         store_sales += i
-  print(store_sales)
+print(f'Общее количество продаж составляет: {store_sales}')
+print(f'Среднее количество продаж составляет: {store_sales/len(stock)}')
 
-for one_product in stock: 
-  sales_amount_products = sales(one_product['items_sold'])
-  print(f'Продажи {one_product["product"]}: {sales_amount_products}')
-  average_sales = 0
-  total_sales = 0
-  total_average_sales = 0
-
-  
-  # average_sales = 
-  # total_sales = 
-  # total_average_sales = 
-
-
-if __name__ == "__main__":
-    msg = sales(stock)
-    print(msg)
+    
