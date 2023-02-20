@@ -14,29 +14,20 @@
     Программа: Программирую
     
 """
+def ask_user(question):
+    try:
+        while True:
+            return questions_and_answers[question]
+    except KeyError:
+       return 'Нет ответа на этот вопрос'
 
-questions_and_answers = {'Как дела?': 'Хорошо!', 
+
+if __name__ == "__main__":
+    questions_and_answers = {'Как дела?': 'Хорошо!', 
                         'Что делаешь?': 'Программирую', 
                         'Как погода?': 'Ветренно..',
                         'Как тебя зовут?': 'Лёша',
                         'Какое твоё любимое блюдо?': 'Пельмени',
-} 
-
-
-def ask_user(answers_dict):
-    while True:
-        ask_question = input('Задайте вопрос: ')
-        if ask_question == 'Как дела?':
-            print(questions_and_answers[ask_question])
-        elif ask_question == 'Что делаешь?':
-            print(questions_and_answers[ask_question])
-        elif ask_question == 'Как погода?':
-            print(questions_and_answers[ask_question])
-        elif ask_question == 'Как тебя зовут?':
-            print(questions_and_answers[ask_question])
-        elif ask_question == 'Какое твоё любимое блюдо?':
-            print(questions_and_answers[ask_question])
-        break    
-    
-if __name__ == "__main__":
-    ask_user(questions_and_answers)
+}    
+    question = input('Задайте вопрос: ')
+    print(ask_user(question))

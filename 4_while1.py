@@ -11,10 +11,10 @@
 
 
 def hello_user(how_are_you):
-  while True:
-    how_are_you = input('Как дела? ')
-    if how_are_you == 'Хорошо':
-      break
+    while True:
+      how_are_you = input('Как дела? ')
+      if how_are_you == 'Хорошо':
+        break
     
     
 if __name__ == "__main__":

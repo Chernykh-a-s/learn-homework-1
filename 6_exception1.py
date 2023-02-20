@@ -17,7 +17,7 @@ def hello_user(how_are_you):
       if how_are_you == 'Хорошо':
         break
   except KeyboardInterrupt:
-    print('Пока!')
+      print('Пока!')
     
 if __name__ == "__main__":
     msg1 = hello_user('Привет')
