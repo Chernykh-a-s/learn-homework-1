@@ -14,7 +14,6 @@
 """
 
 def discounted(price, discount, max_discount=20):
-
     try:
         price = abs(float(price))
         discount = abs(float(discount))

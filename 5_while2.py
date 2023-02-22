@@ -16,19 +16,18 @@
 """
 def ask_user(question):
     try:
-        while True:
-            return questions_and_answers[question]
+        return questions_and_answers[question]
     except KeyError:
-       return 'Нет ответа на этот вопрос'
+        return 'Нет ответа на этот вопрос'
 
 
 if __name__ == "__main__":
     questions_and_answers = {
-                        'Как дела?': 'Хорошо!',
-                        'Что делаешь?': 'Программирую',
-                        'Как погода?': 'Ветренно..',
-                        'Как тебя зовут?': 'Лёша',
-                        'Какое твоё любимое блюдо?': 'Пельмени',
+        'Как дела?': 'Хорошо!',
+        'Что делаешь?': 'Программирую',
+        'Как погода?': 'Ветренно..',
+        'Как тебя зовут?': 'Лёша',
+        'Какое твоё любимое блюдо?': 'Пельмени',
     }
     question = input('Задайте вопрос: ')
     print(ask_user(question))
