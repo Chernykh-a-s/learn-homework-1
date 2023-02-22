@@ -20,6 +20,7 @@ import settings
 
 logging.basicConfig(filename="bot.log", level=logging.INFO)
 
+
 def greet_user(update, context):
     print("Вызван /start")
     update.message.reply_text("Добро пожаловать, друг")
