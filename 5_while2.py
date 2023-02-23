@@ -15,11 +15,7 @@
 
 """
 def ask_user(question):
-    try:
-        return questions_and_answers[question]
-    except KeyError:
-        return 'Нет ответа на этот вопрос'
-
+    return questions_and_answers.get(question, 'Нет ответа на этот вопрос')
 
 if __name__ == "__main__":
     questions_and_answers = {
